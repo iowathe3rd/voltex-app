@@ -74,6 +74,68 @@
     }
 }
 
+@layer utilities {
+    .input-class {
+        @apply text-16 placeholder:text-16 rounded-lg border border-border text-foreground placeholder:text-muted-foreground;
+    }
+
+    .sheet-content button {
+        @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none !important;
+    }
+
+    .text14_padding10 {
+        @apply text-14 px-4 py-2.5 font-semibold;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .header-2 {
+        @apply text-18 font-semibold text-gray-900;
+    }
+
+    .text-10 {
+        @apply text-[10px] leading-[14px];
+    }
+
+    .text-12 {
+        @apply text-[12px] leading-[16px];
+    }
+
+    .text-14 {
+        @apply text-[14px] leading-[20px];
+    }
+
+    .text-16 {
+        @apply text-[16px] leading-[24px];
+    }
+
+    .text-18 {
+        @apply text-[18px] leading-[22px];
+    }
+
+    .text-20 {
+        @apply text-[20px] leading-[24px];
+    }
+
+    .text-24 {
+        @apply text-[24px] leading-[30px];
+    }
+
+    .text-26 {
+        @apply text-[26px] leading-[32px];
+    }
+
+    .text-30 {
+        @apply text-[30px] leading-[38px];
+    }
+
+    .text-36 {
+        @apply text-[36px] leading-[44px];
+    }
+}
+
 @layer components {
     /* Home */
     .home {
@@ -86,6 +148,48 @@
 
     .home-header {
         @apply flex flex-col justify-between gap-8;
+    }
+
+    /* Footer */
+    .footer {
+        @apply flex cursor-pointer items-center justify-between gap-2 py-6;
+    }
+
+    .footer_name {
+        @apply flex size-10 items-center justify-center rounded-full bg-background max-xl:hidden;
+    }
+
+    .footer_email {
+        @apply flex flex-1 flex-col justify-center max-xl:hidden;
+    }
+
+    .footer_name-mobile {
+        @apply flex size-10 items-center justify-center rounded-full;
+    }
+
+    .footer_email-mobile {
+        @apply flex flex-1 flex-col justify-center;
+    }
+
+    .footer_image {
+        @apply relative size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        @apply sticky left-0 top-0 flex h-screen w-fit flex-col justify-between border-r border-border bg-background pt-8 text-foreground max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
+    }
+
+    .sidebar-logo {
+        @apply 2xl:text-26 text-[26px] font-bold max-xl:hidden;
+    }
+
+    .sidebar-link {
+        @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
+    }
+
+    .sidebar-label {
+        @apply text-16 font-semibold max-xl:hidden;
     }
 }
 

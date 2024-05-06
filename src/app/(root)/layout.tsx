@@ -1,14 +1,23 @@
+import MobileNav from "@/components/layout/MobileNav";
 import Sidebar from "@/components/layout/Sidebar";
+import mockUser from "@/mock/user";
 import Image from "next/image";
-import { PropsWithChildren } from "react";
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <main className="flex h-screen w-full font-inter">
+      <Sidebar user={mockUser} />
+
       <div className="flex size-full flex-col">
-        <div className="root-layout">
+        <div className="flex h-16 items-center justify-between p-5 shadow-lg sm:p-8 md:hidden">
           <Image src="/icons/logo.svg" width={30} height={30} alt="logo" />
-          <div></div>
+          <div>
+            <MobileNav user={mockUser} />
+          </div>
         </div>
         {children}
       </div>
