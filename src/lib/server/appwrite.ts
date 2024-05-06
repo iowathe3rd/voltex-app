@@ -1,7 +1,7 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { Account, Client } from "node-appwrite";
+import { Account, Client, Databases, Users } from "node-appwrite";
 const appwrite_endpoint = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT;
 const appwrite_project = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;
 const appwrite_key = process.env.NEXT_APPWRITE_KEY;
@@ -44,6 +44,12 @@ export async function createAdminClient() {
   return {
     get account() {
       return new Account(client);
+    },
+    get database() {
+      return new Databases(client);
+    },
+    get user() {
+      return new Users(client);
     },
   };
 }
