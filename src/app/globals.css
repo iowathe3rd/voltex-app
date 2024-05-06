@@ -76,7 +76,7 @@
 
 @layer utilities {
     .input-class {
-        @apply text-16 placeholder:text-16 rounded-lg border border-border text-foreground placeholder:text-muted-foreground;
+        @apply text-16 placeholder:text-16 rounded-radius border border-border text-foreground placeholder:text-muted-foreground;
     }
 
     .sheet-content button {
@@ -172,7 +172,7 @@
     }
 
     .footer_image {
-        @apply relative size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
+        @apply relative rounded-full size-4 p-2 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
     }
 
     /* Sidebar */
@@ -190,6 +190,14 @@
 
     .sidebar-label {
         @apply text-16 font-semibold max-xl:hidden;
+    }
+
+    /* Mobile nav */
+    .mobilenav-sheet {
+        @apply flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto;
+    }
+    .mobilenav-sheet_close {
+        @apply flex gap-3 items-center p-4 rounded-lg w-full max-w-60;
     }
 }
 

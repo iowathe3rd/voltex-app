@@ -13,7 +13,7 @@ export default async function RootLayout({
       <Sidebar user={mockUser} />
 
       <div className="flex size-full flex-col">
-        <div className="flex h-16 items-center justify-between p-5 shadow-lg sm:p-8 md:hidden">
+        <div className="flex h-16 items-center justify-between p-5  border-border border-b sm:p-8 md:hidden">
           <Image src="/icons/logo.svg" width={30} height={30} alt="logo" />
           <div>
             <MobileNav user={mockUser} />

@@ -1,5 +1,5 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = ({ user, type = "desktop" }: FooterProps) => {
@@ -12,17 +12,18 @@ const Footer = ({ user, type = "desktop" }: FooterProps) => {
       <div
         className={type === "mobile" ? "footer_email-mobile" : "footer_email"}
       >
-        <h1 className="text-14 truncate text-gray-700 font-semibold">
-          {user?.firstName}
-        </h1>
-        <p className="text-14 truncate font-normal text-gray-600">
+        <h1 className="text-14 truncate font-semibold">{user?.firstName}</h1>
+        <p className="text-14 truncate font-normal text-muted-foreground">
           {user?.email}
         </p>
       </div>
 
-      <div className="footer_image">
-        <Image src="icons/logout.svg" fill alt="jsm" />
-      </div>
+      <Button
+        className="w-fit p-2 rounded-full aspect-square"
+        variant={"outline"}
+      >
+        <Image src="icons/logout.svg" width={40} height={40} alt="logout" />
+      </Button>
     </footer>
   );
 };
