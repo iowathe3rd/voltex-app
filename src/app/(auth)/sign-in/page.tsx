@@ -1,6 +1,10 @@
+import AuthForm from "@/app/widgets/AuthForm";
+
 const SignIn = () => {
   return (
-    <section className="flex-center size-full max-sm:px-6">signIn</section>
+    <section className="flex-center size-full max-sm:px-6">
+      <AuthForm type="sign-in" />
+    </section>
   );
 };
 

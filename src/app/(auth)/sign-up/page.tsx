@@ -1,6 +1,10 @@
+import AuthForm from "@/app/widgets/AuthForm";
+
 const SignUp = () => {
   return (
-    <section className="flex-center size-full max-sm:px-6">sign up</section>
+    <section className="flex-center size-full max-sm:px-6">
+      <AuthForm type="sign-up" />
+    </section>
   );
 };
 
