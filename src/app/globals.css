@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -73,4 +72,42 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+@layer components {
+    /* Home */
+    .home {
+        @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+    }
+
+    .home-content {
+        @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+    }
+
+    .home-header {
+        @apply flex flex-col justify-between gap-8;
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #dddddd;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
 }

@@ -209,6 +209,7 @@ declare interface TotlaBalanceBoxProps {
 }
 
 declare interface FooterProps {
+  type?: "desktop" | "mobile";
   user: User;
 }
 
