@@ -1,6 +1,7 @@
 import HeaderBox from "@/components/layout/HeaderBox";
+import { getLoggedInUser } from "@/lib/server/user.actions";
 
-const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
+const Home = async ({ searchParams: { page } }: SearchParamProps) => {
   return (
     <section className="home">
       <div className="home-content">
@@ -11,6 +12,11 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
             user={"Guest"}
             subtext="Access and manage your account and transactions efficiently."
           />
+          {/* <TotalBalanceBox
+            accounts={accountsData}
+            totalBanks={accounts?.totalBanks}
+            totalCurrentBalance={accounts?.totalCurrentBalance}
+          /> */}
         </header>
       </div>
     </section>

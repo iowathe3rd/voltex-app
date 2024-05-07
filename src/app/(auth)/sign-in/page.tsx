@@ -1,4 +1,4 @@
-import AuthForm from "@/app/widgets/AuthForm";
+import AuthForm from "@/widgets/AuthForm";
 
 const SignIn = () => {
   return (
