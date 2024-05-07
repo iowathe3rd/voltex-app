@@ -1,5 +1,4 @@
 import HeaderBox from "@/components/layout/HeaderBox";
-import { getLoggedInUser } from "@/lib/server/user.actions";
 
 const Home = async ({ searchParams: { page } }: SearchParamProps) => {
   return (
